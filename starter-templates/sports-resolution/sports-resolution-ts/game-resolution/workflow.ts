@@ -24,7 +24,7 @@ export const configSchema = z.object({
       sportsMarketAddress: z.string(),
       gasLimit: z.string().optional(),
     })
-  ),
+  ).min(1),
   // Base URLs for each sports data source. Each URL is appended with
   // /{gameId}/result to form the full request path. Store API keys as
   // query params or configure headers in fetchGameResult() — see README.
